@@ -38,7 +38,7 @@ const Title = styled.h1`
     margin-bottom: 20px;
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
     border:none;
     padding: 10px;
     background-color: white;
@@ -50,13 +50,14 @@ const Button = styled.button`
     }
 `;
 
+
 const CategoryItem = ({ item }) => {
   return (
     <Container>
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Link to="/Products" > <Button >SHOP NOW</Button> </Link> 
+        <Link to="/Products"> <Button >SHOP NOW</Button> </Link> 
       </Info>
     </Container>
   );

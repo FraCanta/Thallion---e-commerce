@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 
 const Container = styled.div``;
 
+
 const Products = () => {
     return (
         <Container>
