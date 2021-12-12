@@ -2,15 +2,13 @@ import React from 'react';
 import Annuncio from '../components/Annuncio';
 import Navbar from '../components/Navbar';
 import styled from 'styled-components';
+import Product from '../components/Product';
+import { popularProducts } from '../data';
 import Footer from '../components/Footer';
-import { useLocation } from "react-router";
-import { useState } from "react";
+import { useState } from 'react';
+
 
 const Container = styled.div``;
-
-const Title = styled.h1`
-  margin: 20px;
-`;
 
 const FilterContainer = styled.div`
   display: flex;
@@ -31,11 +29,11 @@ const Select = styled.select`
   padding: 10px;
   margin-right: 20px;
 `;
-const Option = styled.option``;
+
+const Option = styled.option`
+`;
 
 const Products = () => {
-  const location = useLocation();
-  const cat = location.pathname.split("/")[2];
   const [filters, setFilters] = useState({});
   const [sort, setSort] = useState("newest");
 
@@ -47,12 +45,12 @@ const Products = () => {
     });
   };
 
-  return (
-    <Container>
-      <Navbar />
-      <Annuncio />
-      <Title>{cat}</Title>
-      <FilterContainer>
+
+    return (
+        <Container>
+            <Annuncio/>
+            <Navbar/>
+            <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
           <Select name="color" onChange={handleFilters}>
@@ -82,10 +80,12 @@ const Products = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products cat={cat} filters={filters} sort={sort} />
-      <Footer />
-    </Container>
-  );
-};
+            {popularProducts.map((item) => (
+            <Product item={item} key={item.id} filters={filters} sort={sort} />
+      ))}
+      <Footer/>
+        </Container>
+    )
+}
 
 export default Products;

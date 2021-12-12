@@ -2,14 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: teal;
   height: 30vh;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-image: url
-    ("https://images.pexels.com/photos/1389460/pexels-photo-1389460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("https://images.pexels.com/photos/1389460/pexels-photo-1389460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center;
   background-size: cover;
   margin-top: 25px;
   flex-direction: column;

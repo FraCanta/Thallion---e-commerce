@@ -35,18 +35,15 @@ const Input = styled.input`
   width: 100px;
 `;
 
-const Center = styled.div`
+const Center = styled.h1`
   font-size: 30px;
   font-weight: bold;
   flex: 1;
   text-align: center;
   align-items: center;
-  text-decoration: none;
-  color: #7a7a7a;
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
-    color:#131313;
   }
 `;
 
@@ -76,7 +73,7 @@ const Navbar = () => {
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
-        <Center to={'/Home'}>Thallion.</Center>
+        <Center>Thallion.</Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>

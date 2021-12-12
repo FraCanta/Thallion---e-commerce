@@ -22,16 +22,15 @@ const Info = styled.div`
 `;
 
 const Container = styled.div`
-  margin: 50px auto;
+  margin: 5px;
   max-width: 280px;
   height: 350px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
   background-color: #f5fbfd;
   position: relative;
-  &:hover ${Info} {
+  &:hover ${Info}{
     opacity: 1;
   }
 `;
@@ -42,6 +41,7 @@ const Circle = styled.div`
   border-radius: 50%;
   background-color: white;
   position: absolute;
+  
 `;
 
 const Image = styled.img`
@@ -66,18 +66,17 @@ const Icon = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 30px;
+font-size: 1.5rem;
+font-weight: bold;
+margin-left: 30px;
 `;
 
-const Product = ({ item }) => {
-  return (
-    <Container>
+const Product = ({item}) => {
+    return (
+        <Container>
       <Circle />
       <Image src={item.img} />
       <Title>{item.title}</Title>
-      
       <Info>
         <Icon>
           <ShoppingCartOutlined />
@@ -90,7 +89,7 @@ const Product = ({ item }) => {
         </Icon>
       </Info>
     </Container>
-  );
-};
+    )
+}
 
-export default Product;
+export default Product
