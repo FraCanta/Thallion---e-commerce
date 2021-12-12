@@ -2,7 +2,6 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -42,14 +41,14 @@ const Center = styled.div`
   flex: 1;
   text-align: center;
   align-items: center;
+  text-decoration: none;
+  color: #7a7a7a;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color:#131313;
+  }
 `;
-
-const linkStyle = { 
-  textDecoration: "none",
-  color: "#7a7a7a",
-  fontSize: "20px",
-  fontWeight: "bold",
-};
 
 const Right = styled.div`
   flex: 1;
@@ -77,7 +76,7 @@ const Navbar = () => {
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
-        <Link to={'/Home'} style={linkStyle}><Center >Thallion.</Center></Link>
+        <Center to={'/Home'}>Thallion.</Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>

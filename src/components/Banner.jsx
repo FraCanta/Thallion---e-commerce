@@ -9,7 +9,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-image: url
-    ("https://www.pexels.com/it-it/foto/lascia-hang-on-rope-1389460/");
+    ("https://images.pexels.com/photos/1389460/pexels-photo-1389460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
   margin-top: 25px;
   flex-direction: column;
