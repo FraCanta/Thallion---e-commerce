@@ -23,10 +23,11 @@ const Info = styled.div`
 
 const Container = styled.div`
   margin: 5px;
-  max-width: 280px;
-  height: 350px;
+  height: 30vh;
   display: flex;
+  margin: 0 auto;
   align-items: center;
+  padding: 50px;
   justify-content: space-between;
   background-color: #f5fbfd;
   position: relative;
@@ -68,8 +69,15 @@ const Icon = styled.div`
 const Title = styled.h3`
 font-size: 1.5rem;
 font-weight: bold;
-margin-left: 30px;
+margin-left: 50px;
 `;
+
+const Desc = styled.p`
+  font-size: 1rem;
+  margin-left: 30px;
+  display: flex;
+  `;
+
 
 const Product = ({item}) => {
     return (
@@ -77,6 +85,7 @@ const Product = ({item}) => {
       <Circle />
       <Image src={item.img} />
       <Title>{item.title}</Title>
+      <Desc>{item.cat}</Desc>
       <Info>
         <Icon>
           <ShoppingCartOutlined />

@@ -13,6 +13,8 @@ const Container = styled.div``;
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  background-color: teal;
+  color: white;
 `;
 
 const Filter = styled.div`
